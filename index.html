@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                screens: {
+
+                    'lg': { 'min': '1024px', 'max': '3000px' },
+
+                    'xl': { 'min': '836px', 'max': '1024px' },
+
+                    'md': { 'min': '768px', 'max': '1023px' },
+
+                    'sm': { 'min': '320px', 'max': '767px' },
+                },
+                extend: {
+                    colors: {
+                        cgreen0: '#00B9B6',
+                        cgreen100: '#00CDAC',
+                        cblack: '#333333',
+                        cdarkblcak: '#0E0E0F',
+                        cgold: '#FFA800',
+                        backend: '#F9FDFF',
+                        min: '#AFAFAF'
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+            content-visibility: auto;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="bg-backend">
+    <div class="bg-backend regular text-cblack h-svh">
+        <div class="contain xl:px-[30px] md:px-[30px] sm:px-[20px]">
+            <!-- NAV -->
+            <nav>
+                <div class="flex items-center justify-between py-[25px] md:py-5">
+                    <div class="md:w-[91.5px] sm:w-[91.5px] md:h-[18px] sm:h-[18px]"><img src="./img/logo.svg" alt="">
+                    </div>
+                    <div class="lg:flex items-center gap-10 medium hidden">
+                        <a href="#" class="py-[10px] px-[5px] rounded-xl hover:scale-[1.1]">About us</a>
+                        <a href="#" class="py-[10px] px-[5px] rounded-xl hover:scale-[1.1]">Blog</a>
+                        <a href="#" class="py-[10px] px-[5px] rounded-xl hover:scale-[1.1]">Contact</a>
+                    </div>
+                    <div class="lg:flex items-center gap-5 hidden">
+                        <div class="flex items-center gap-[6px] group select-none">
+                            <img src="./img/usa.svg" alt="">
+                            <div class="medium text-lg leading-[120%]">EN</div>
+                            <img src="./img/down.svg" alt="" class="group-hover:scale-[1.3]">
+                        </div>
+                        <button
+                            class="rounded-xl shadow-[0_15px_30px_0_rgba(220,232,243,.25)] bg-cgreen0 text-white bold text-base leading-[120%] py-3 px-[30px] hover:bg-cgreen100">Войти</button>
+                    </div>
+                    <div class="md:flex sm:flex items-center gap-5 hidden">
+                        <button
+                            class="bg-cgreen0 hover:bg-cgreen100 text-white md:semibold text-xs leading-[120%] py-2 px-[25px] sm:px-[15px] rounded-xl">Начать
+                            беседу</button>
+                        <a href="#" class="size-5 overflow-hidden"><img src="./img/usa.svg" alt="" class="size-5"></a>
+                        <button
+                            class="before:content-[''] before:bg-cblack before:w-6 before:h-[3px] before:inline-block before:rounded-full 
+                        after:content-[''] after:bg-cblack after:w-6 after:h-[3px] after:inline-block after:rounded-full flex flex-col gap-[5.5px]">
+                            <span class="bg-cgreen0 rounded-full w-6 h-[3px]"></span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+            <!-- NAV END -->
+            <!-- HERO -->
+            <div
+                class="flex relative mt-[63px] xl:mt-[50px] md:mt-[50px] sm:mt-[30px] sm:flex-col sm:gap-[30px] sm:items-center">
+                <div
+                    class="flex flex-col gap-[50px] xl:gap-[30px] pt-[59px] xl:pt-[38px] md:pt-[1px] sm:pt-0 xl:pt-10 items-start max-w-[644px] xl:max-w-[542px] md:max-w-[392px] sm:gap-[30px] sm:items-center">
+                    <div class="flex flex-col select-none sm:items-center">
+                        <a href="#" class="text-cgreen0 text-base leading-[140%] hover:text-cgreen100 xl:text-base">+300
+                            прошедших
+                            отбор психологов</a>
+                        <div
+                            class="bold text-[48px] leading-[120%] text-cdarkblcak md:text-[32px] sm:text-[28px] sm:text-center">
+                            Сессии с психологом Онлайн</div>
+                    </div>
+                    <button
+                        class="bg-cgreen0 hover:bg-cgreen100 py-[13px] px-[30px] text-white bold leading-[120%] text-lg rounded-xl xl:semibold md:semibold">Начать
+                        беседу</button>
+                </div>
+                <div class="absolute top-0 -right-[30px] xl:-right-[24.36px] md:-right-[18px] sm:static"><img
+                        src="./img/innerpeace.png" alt=""
+                        class="xl:w-[478px] xl:h-[378px] md:w-[349px] md:h-[273px] sm:w-[277px] sm:h-[216px]">
+                </div>
+            </div>
+            <!-- HERO END -->
+            <!-- HELP -->
+            <div
+                class="flex gap-[50px] mt-[330px] items-center xl:mt-[219px] xl:gap-[30px] md:mt-[179px] md:flex-col sm:mt-[81px] sm:flex-col sm:gap-[30px]">
+                <a href="#" class="bg-[url('./img/help.svg')] bg-cover bg-no-repeat bg-center w-[615px] h-[342px] rounded-3xl overflow-hidden flex items-center justify-center
+                    xl:w-[533px] xl:h-[298px] md:w-[450px] md:h-[251px] sm:w-[320px] sm:h-[178px]">
+                    <img src="./img/play.svg" alt="">
+                </a>
+                <div class="flex flex-col md:self-center flex-1 sm:items-center">
+                    <div
+                        class="bold leading-[120%] text-[32px] text-cdarkblcak mb-[37px] xl:mb-[30px] md:text-[28px] md:mb-[30px] sm:text-[24px] sm:text-center sm:px-[10px] sm:mb-[30px]">
+                        Скачайте бесплатно приложение SPEAK
+                    </div>
+                    <div class="flex gap-5 mb-[72px] xl:mb-[50px] md:mb-[40px] sm:mb-[40px] md:self-center">
+                        <div
+                            class="size-[90px] flex items-center justify-center bg-white rounded-xl shadow-[0_15px_25px_0_rgba(0,0,0,.05)]">
+                            <img src="./img/sss.svg" alt="">
+                        </div>
+                        <div class="flex flex-col gap-[5px] text-base leading-[140%] text-cblack sm:text-[14px]">
+                            <div class="semibold text-[24px] text-cgreen0 sm:text-[18px]">Speak</div>
+                            <div>онлайн сессии с психологом</div>
+                            <div>доступно для iOS и Android</div>
+                        </div>
+                    </div>
+                    <div class="flex gap-5 md:self-center">
+                        <a href="#"><img src="./img/appstore.svg" alt=""></a>
+                        <a href="#"><img src="./img/playstore.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <!-- HELP END -->
+            <!-- RECOMMEND -->
+            <div
+                class="flex flex-col gap-[50px] items-center mt-[139px] xl:mt-[100px] md:mt-[85px] md:gap-[30px] sm:mt-[80px] sm:gap-[30px]">
+                <div
+                    class="bold text-[32px] leading-[120%] text-cdarkblcak md:text-[28px] sm:text-[24px] sm:text-center">
+                    Психологи работающие с актуальными темами</div>
+                <div
+                    class="flex items-center justify-center gap-[15px] px-[40px] text-[18px] leading-[120%] text-cblack flex-wrap xl:px-[28px] md:px-[23px] md:text-[16px] sm:px-[17px] sm:text-[14px]">
+                    <a href="#" class="py-[10px] px-[30px] bg-white rounded-xl hover:shadow-[0_15px_25px_0_rgba(0,0,0,0.05)] md:shadow-[0_15px_25px_0_rgba(0,0,0,0.05)] 
+                    sm:shadow-[0_15px_25px_0_rgba(0,0,0,0.05)]">Чувства</a>
+                    <a href="#"
+                        class="py-[10px] px-[30px] bg-white rounded-xl hover:shadow-[0_15px_25px_0_rgba(0,0,0,0.05)] md:shadow-[0_15px_25px_0_rgba(0,0,0,0.05)] sm:shadow-[0_15px_25px_0_rgba(0,0,0,0.05)]">Одиночество</a>
+                    <a href="#"
+                        class="py-[10px] px-[30px] bg-white rounded-xl text-cgreen0 hover:text-cgreen100 hover:shadow-[0_15px_25px_0_rgba(0,0,0,0.05)] md:shadow-[0_15px_25px_0_rgba(0,0,0,0.05)] sm:shadow-[0_15px_25px_0_rgba(0,0,0,0.05)]">Вредные
+                        привычки</a>
+                    <a href="#"
+                        class="py-[10px] px-[30px] bg-white rounded-xl hover:shadow-[0_15px_25px_0_rgba(0,0,0,0.05)] md:shadow-[0_15px_25px_0_rgba(0,0,0,0.05)] sm:shadow-[0_15px_25px_0_rgba(0,0,0,0.05)]">Отношения</a>
+                    <a href="#"
+                        class="py-[10px] px-[30px] bg-white rounded-xl hover:shadow-[0_15px_25px_0_rgba(0,0,0,0.05)] md:shadow-[0_15px_25px_0_rgba(0,0,0,0.05)] sm:shadow-[0_15px_25px_0_rgba(0,0,0,0.05)]">Работа</a>
+                    <a href="#"
+                        class="py-[10px] px-[30px] bg-white rounded-xl hover:shadow-[0_15px_25px_0_rgba(0,0,0,0.05)] md:shadow-[0_15px_25px_0_rgba(0,0,0,0.05)] sm:shadow-[0_15px_25px_0_rgba(0,0,0,0.05)]">Смыслы</a>
+                    <a href="#"
+                        class="py-[10px] px-[30px] bg-white rounded-xl hover:shadow-[0_15px_25px_0_rgba(0,0,0,0.05)] md:shadow-[0_15px_25px_0_rgba(0,0,0,0.05)] sm:shadow-[0_15px_25px_0_rgba(0,0,0,0.05)]">Одиночество</a>
+                    <a href="#"
+                        class="py-[10px] px-[30px] bg-white rounded-xl hover:shadow-[0_15px_25px_0_rgba(0,0,0,0.05)] md:shadow-[0_15px_25px_0_rgba(0,0,0,0.05)] sm:shadow-[0_15px_25px_0_rgba(0,0,0,0.05)]">Одиночество</a>
+                    <a href="#"
+                        class="py-[10px] px-[30px] bg-white rounded-xl hover:shadow-[0_15px_25px_0_rgba(0,0,0,0.05)] md:shadow-[0_15px_25px_0_rgba(0,0,0,0.05)] sm:shadow-[0_15px_25px_0_rgba(0,0,0,0.05)]">Отношения
+                        с близкими</a>
+                    <a href="#"
+                        class="py-[10px] px-[30px] rounded-xl text-white bold bg-cgreen0 hover:bg-cgreen100 hover:shadow-[0_15px_25px_0_rgba(0,0,0,0.05)] md:shadow-[0_15px_25px_0_rgba(0,0,0,0.1)] sm:shadow-[0_15px_25px_0_rgba(0,0,0,0.05)]">+
+                        300 психологов</a>
+                </div>
+                <div
+                    class="flex flex-col gap-10 items-center bold text-[18px] xl:text-[16px] xl:whitespace-nowrap  leading-[120%] text-cblack">
+                    <div class="flex gap-5 items-center">
+                        <a href="#"
+                            class="p-[15px] sm:w-[320px] bg-white rounded-xl sm:text-[18px] hover:shadow-[0_15px_25px_0_rgba(0,0,0,.05)] md:shadow-[0_15px_25px_0_rgba(0,0,0,.05)] sm:shadow-[0_15px_25px_0_rgba(0,0,0,.05)]">
+                            <img src="./img/ilya.jpg" alt=""
+                                class="w-[100%] mb-[15px] rounded-xl overflow-hidden sm:w-full">
+                            <div class="mb-[10px] md:mb-[29px]">Илья Благов</div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-[5px]">
+                                    <img src="./img/star.svg" alt="">
+                                    <img src="./img/star.svg" alt="">
+                                    <img src="./img/star.svg" alt="">
+                                    <img src="./img/star.svg" alt="">
+                                    <img src="./img/star.svg" alt="">
+                                </div>
+                                <img src="./img/arrow-right.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="#"
+                            class="p-[15px] bg-white rounded-xl hover:shadow-[0_15px_25px_0_rgba(0,0,0,.05)] md:shadow-[0_15px_25px_0_rgba(0,0,0,.05)] sm:hidden">
+                            <img src="./img/esina.jpg" alt="" class="w-[100%] mb-[15px] rounded-xl overflow-hidden">
+                            <div class="mb-[10px] md:mb-[29px]">Иванна Есина</div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-[5px]">
+                                    <img src="./img/star.svg" alt="">
+                                    <img src="./img/star.svg" alt="">
+                                    <img src="./img/star.svg" alt="">
+                                    <img src="./img/star.svg" alt="">
+                                    <img src="./img/star.svg" alt="">
+                                </div>
+                                <img src="./img/arrow-right.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="#"
+                            class="p-[15px] bg-white rounded-xl hover:shadow-[0_15px_25px_0_rgba(0,0,0,.05)] md:shadow-[0_15px_25px_0_rgba(0,0,0,.05)] sm:hidden">
+                            <img src="./img/artur.jpg" alt="" class="w-[100%] mb-[15px] rounded-xl overflow-hidden">
+                            <div class="mb-[10px] md:mb-[10px]">Артур Островский</div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-[5px]">
+                                    <img src="./img/star.svg" alt="">
+                                    <img src="./img/star.svg" alt="">
+                                    <img src="./img/star.svg" alt="">
+                                    <img src="./img/star.svg" alt="">
+                                    <img src="./img/star.svg" alt="">
+                                </div>
+                                <img src="./img/arrow-right.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="#"
+                            class="p-[15px] bg-white rounded-xl hover:shadow-[0_15px_25px_0_rgba(0,0,0,.05)] md:hidden sm:hidden">
+                            <img src="./img/yulya.jpg" alt="" class="w-[100%] mb-[15px] rounded-xl overflow-hidden">
+                            <div class="mb-[10px]">Юля Заграничная</div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-[5px]">
+                                    <img src="./img/star.svg" alt="">
+                                    <img src="./img/star.svg" alt="">
+                                    <img src="./img/star.svg" alt="">
+                                    <img src="./img/star.svg" alt="">
+                                    <img src="./img/star.svg" alt="">
+                                </div>
+                                <img src="./img/arrow-right.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="#"
+                            class="p-[15px] bg-white rounded-xl hover:shadow-[0_15px_25px_0_rgba(0,0,0,.05)] md:shadow-[0_15px_25px_0_rgba(0,0,0,.05)] sm:hidden">
+                            <img src="./img/andrey.jpg" alt="" class="w-[100%] mb-[15px] rounded-xl overflow-hidden">
+                            <div class="mb-[10px] md:mb-[29px]">Андрей Ян</div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-[5px]">
+                                    <img src="./img/star.svg" alt="">
+                                    <img src="./img/star.svg" alt="">
+                                    <img src="./img/star.svg" alt="">
+                                    <img src="./img/star.svg" alt="">
+                                    <img src="./img/star.svg" alt="">
+                                </div>
+                                <img src="./img/arrow-right.svg" alt="">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="flex gap-[5px]">
+                        <div class="w-[20px] h-[5px] bg-cgreen0/25 rounded-full"></div>
+                        <div class="w-[20px] h-[5px] bg-cgreen0/25 rounded-full"></div>
+                        <div class="w-[30px] h-[6px] bg-cgreen100/75 rounded-full"></div>
+                        <div class="w-[20px] h-[5px] bg-cgreen0/25 rounded-full"></div>
+                        <div class="w-[20px] h-[5px] bg-cgreen0/25 rounded-full"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- RECOMMEND END -->
+            <!-- CHECK -->
+            <div
+                class="flex justify-between mt-[161px] xl:mt-[102px] md:mt-[110px] md:items-center sm:mt-[80px] sm:flex-col sm:gap-[20px] ">
+                <div class="flex flex-col gap-10 select-none pt-[27px] xl:pt-[9px] md:gap-[30px] md:pt-0 sm:gap-[30px]">
+                    <div
+                        class="bold text-[36px] leading-[120%] text-cdarkblcak xl:text-[32px] md:text-[28px] sm:text-[24px] sm:text-center">
+                        Поможем вам</div>
+                    <div class="flex flex-col gap-[15px] text-[18px] leading-[140%] text-cblack sm:text-[16px]">
+                        <div class="flex items-center gap-[10px] md:items-start sm:items-start">
+                            <div class="size-5 min-w-[20px] rounded-full bg-cgreen0/10 flex items-center justify-center"><img
+                                    src="./img/check.svg" alt="">
+                            </div>
+                            Разрешить причины сложных отношений с партнером
+                        </div>
+                        <div class="flex items-center gap-[10px] md:items-start sm:items-start">
+                            <div class="size-5 min-w-[20px] rounded-full bg-cgreen0/10 flex items-center justify-center"><img
+                                    src="./img/check.svg" alt="">
+                            </div>
+                            Снять или снизить остроту переживаний
+                        </div>
+                        <div class="flex items-center gap-[10px] md:items-start sm:items-start">
+                            <div class="size-5 min-w-[20px] rounded-full bg-cgreen0/10 flex items-center justify-center"><img
+                                    src="./img/check.svg" alt="">
+                            </div>
+                            Справиться с выгоранием на работе и найти мотивацию
+                        </div>
+                        <div class="flex items-center gap-[10px] md:items-start sm:items-start">
+                            <div class="size-5 min-w-[20px] rounded-full bg-cgreen0/10 flex items-center justify-center"><img
+                                    src="./img/check.svg" alt="">
+                            </div>
+                            Понять себя в отношениях с близкими людьми
+                        </div>
+                        <div class="flex items-center gap-[10px] md:items-start sm:items-start">
+                            <div class="size-5 min-w-[20px] rounded-full bg-cgreen0/10 flex items-center justify-center"><img
+                                    src="./img/check.svg" alt="">
+                            </div>
+                            Найти себя и понимать свои желания
+                        </div>
+                        <div class="flex items-center gap-[10px] md:items-start sm:items-start">
+                            <div class="size-5 min-w-[20px] rounded-full bg-cgreen0/10 flex items-center justify-center"><img
+                                    src="./img/check.svg" alt="">
+                            </div>
+                            Исследовать и управлять изменениями в своей жизни
+                        </div>
+                    </div>
+                </div>
+                <img src="./img/manwoman.png" alt=""
+                    class="xl:w-[298px] xl:h-[320px] md:w-[274px] md:h-[293px] sm:w-[266px] sm:h-[284px] sm:self-center">
+            </div>
+            <!-- CHECK END -->
+            <!-- COMFORT -->
+            <div
+                class="rounded-[24px] bg-cgreen0/10 mt-[214px] pt-[50px] pr-[30px] pb-[116px] pl-[380px] relative xl:py-[50px] xl:pr-[25px] xl:pl-[322px] md:mt-[150px] md:pt-[49px] md:pr-[30px] md:pb-[53px] md:pl-[236px] sm:mt-[133px] sm:pt-[300px] sm:px-[20px] sm:pb-[40px] sm:-mx-[20px] sm:rounded-none">
+                <img src="./img/mobile.png" alt="" class="absolute left-[45px] -top-[28px] xl:-top-[50px] xl:w-[211px] xl:h-[423px] md:w-[176px] md:h-[352px] md:left-[20px] md:-top-[50px]
+                sm:w-[160px] sm:h-[320px] sm:-top-[50px] sm:left-0 sm:right-0 sm:mx-auto">
+                <div class="flex flex-col gap-10 md:gap-[30px] sm:gap-[30px]">
+                    <div
+                        class="bold sm:text-[24px] sm:text-center text-[36px] leading-[120%] text-cdarkblcak xl:text-[32px] md:text-[28px]">
+                        Преимущества онлайн сессий с психологом
+                    </div>
+                    <div
+                        class="flex flex-col gap-5 text-cdarkblcak text-[18px] leading-[140%] md:text-[16px] sm:text-[16px]">
+                        <div class="flex flex-col gap-[5px]">
+                            <div
+                                class="bold text-[20px] sm:text-[18px] md:text-[18px] leading-[120%] before:content-[''] before:size-[5px] before:rounded-full before:bg-cgreen0 before:block flex items-center gap-[5px]">
+                                Занимайтесь где и как удобно</div>
+                            <div class="pl-[10px]">Дома или в поездке и в любом часовом поясе</div>
+                        </div>
+                        <div class="flex flex-col gap-[5px]">
+                            <div
+                                class="bold text-[20px] sm:text-[18px] md:text-[18px] leading-[120%] before:content-[''] before:size-[5px] before:rounded-full before:bg-cgreen0 before:block flex items-center gap-[5px]">
+                                Меньше забот- больше мотивации</div>
+                            <div class="pl-[10px]">Не тратьте время на дорогу и управляйте занятиями в два клика</div>
+                        </div>
+                        <div class="flex flex-col gap-[5px]">
+                            <div
+                                class="bold text-[20px] sm:text-[18px] md:text-[18px] leading-[120%] before:content-[''] before:size-[5px] before:rounded-full before:bg-cgreen0 before:block flex items-center gap-[5px]">
+                                Доверяйте себе</div>
+                            <div class="pl-[10px]">Выбирайте среди проверенных психологов, которые специаллизируются на
+                                ваших запросах</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- COMFORT END -->
+            <!-- SPECIALISTS -->
+            <div class="mt-[140px] text-cdarkblcak select-none xl:mt-[100px] md:mt-[100px] sm:mt-[80px]">
+                <div class="flex flex-col gap-[5px] mb-[42px] xl:mb-[50px] md:mb-[50px] sm:mb-[30px]">
+                    <div
+                        class="bold text-[36px] leading-[120%] xl:text-[32px] md:text-[32px] sm:text-[24px] sm:text-center">
+                        Как мы отбираем специалистов?</div>
+                    <div class="text-[18px] leading-[140%] text-cgreen0 sm:text-[16px] sm:text-center">Отбор проходят
+                        меньше 10% специаллистов</div>
+                </div>
+                <div class="flex justify-between items-center sm:flex-col sm:gap-[28px]">
+                    <div
+                        class="flex flex-col gap-[30px] text-[18px] leading-[150%] text-cblack sm:text-[16px] sm:text-start">
+                        <div class="flex flex-col gap-[5px] relative ml-[50px] md:ml-[30px] sm:ml-[30px]">
+                            <div class="absolute -top-[20px] -left-[50px] md:-left-[30px] sm:-left-[30px]"><img
+                                    src="./img/num.png" alt=""></div>
+                            <div class="bold text-[20px] leading-[140%] text-cdarkblcak sm:text-[18px]">
+                                Документы об образовании
+                            </div>
+                            <div>
+                                Обязательно иметь высшее психологическое образование и сертификаты для ведения
+                                психотерапии
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-[5px] relative ml-[50px] md:ml-[30px] sm:ml-[30px]">
+                            <div class="absolute -top-[20px] -left-[50px] md:-left-[30px] sm:-left-[30px]"><img
+                                    src="./img/num2.png" alt=""></div>
+                            <div class="bold text-[20px] leading-[140%] text-cdarkblcak sm:text-[18px]">
+                                Опыт частной практики и личной терапии
+                            </div>
+                            <div>
+                                Нужно не менее 3-х лет частной практики, личная терапия и регулярные супервизии
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-[5px] relative ml-[50px] md:ml-[30px] sm:ml-[30px]">
+                            <div class="absolute -top-[20px] -left-[50px] md:-left-[30px] sm:-left-[30px]"><img
+                                    src="./img/num3.png" alt=""></div>
+                            <div class="bold text-[20px] leading-[140%] text-cdarkblcak sm:text-[18px]">
+                                Собеседование с нашим экспертом-ментором
+                            </div>
+                            <div>
+                                Отслеживаются коммуникативные способности, уровень эмпатии, манера и стиль беседы,
+                                проффесиональные компетенции
+                            </div>
+                        </div>
+                    </div>
+                    <img src="./img/ipad.png" alt=""
+                        class="xl:w-[304px] xl:h-[324px] md:w-[304px] md:h-[324px] sm:w-[278px] sm:h-[298px]">
+                </div>
+            </div>
+            <!-- SPECIALISTS END -->
+            <!-- SERVIS -->
+            <div class="flex flex-col text-cdarkblcak mt-[140px] select-none xl:mt-[100px] md:mt-[100px] sm:mt-[108px]">
+                <div
+                    class="mb-[50px] bold text-[36px] leading-[120%] text-center md:text-[32px] md:text-[32px] sm:mb-[40px] sm:text-[24px]">
+                    О сервисе</div>
+                <div class="flex md:flex-col md:gap-[50px] md:items-center sm:flex-col sm:gap-[40px] sm:items-center">
+                    <a href="#"
+                        class="bg-[url('./img/help.svg')] bg-cover bg-no-repeat bg-center w-[615px] h-[342px] rounded-3xl overflow-hidden flex items-center justify-center xl:w-[593px] xl:h-[330px] sm:w-full sm:h-[178px] md:order-1 md:w-full md:h-[383px] sm:order-1">
+                        <img src="./img/play.svg" alt="">
+                    </a>
+                    <div
+                        class="flex xl:flex-col lg:flex-col gap-[40px] pl-[240px] pt-[38px] xl:gap-[30px] xl:pl-[50px] xl:pt-[32px] text-[18px] leading-[140%] xl:text-[16px] md:p-0 md:w-full md:justify-between md:text-[16px] sm:p-0 sm:justify-between sm:text-[14px]">
+                        <div class="flex flex-col md:items-center sm:items-center sm:text-center">
+                            <div class="text-cgold bold text-[48px] leading-[120%] xl:text-[42px] sm:text-[20px]">900 +
+                            </div>
+                            <div>регистраций вчера</div>
+                        </div>
+                        <div class="flex flex-col md:items-center sm:items-center sm:text-center">
+                            <div class="text-cgold bold text-[48px] leading-[120%] xl:text-[42px] sm:text-[20px]">75 000
+                                +</div>
+                            <div>проведено сессий</div>
+                        </div>
+                        <div class="flex flex-col md:items-center sm:items-center sm:text-center">
+                            <div class="text-cgold bold text-[48px] leading-[120%] xl:text-[42px] sm:text-[20px]">354 +
+                            </div>
+                            <div>психологов</div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="mt-[104px] flex justify-between gap-[20px] xl:mt-[50px] md:mt-[50px] sm:flex-col sm:mt-[40px]">
+                    <a href="#"
+                        class="flex gap-[10px] items-center bg-white rounded-[24px] hover:shadow-[0_15px_25px_0_rgba(0,0,0,0.5)] py-[20px] xl:py-[10px] px-[30px] md:py-[10px] md:pl-[10px] md:pr-[20px] sm:shadow-[0_15px_25px_0_rgba(0,0,0,0.5)] md:shadow-[0_15px_25px_0_rgba(0,0,0,0.5)] sm:pt-[10px] sm:pr-[20px] sm:pt-[20px] sm:pl-[10px]">
+                        <img src="./img/calendar.svg" alt=""
+                            class="size-[80px] overflow-hidden md:size-[70px] md:pb-[33px] sm:size-[70px] sm:pb-[38px]">
+                        <div
+                            class="flex flex-col gap-[5px] text-[18px] leading-[140%] text-cblack md:text-[16px] sm:text-[16px] sm:gap-[10px]">
+                            <div class="bold leading-[120%] text-[20px] text-cdarkblcak md:text-[18px] sm:text-[18px]">
+                                Подбор “По позже”</div>
+                            Подбор с возможностью бронирование сессии на будущее
+                        </div>
+                    </a>
+                    <a href="#"
+                        class="flex gap-[10px] items-center bg-white rounded-[24px] hover:shadow-[0_15px_25px_0_rgba(0,0,0,0.5)] py-[20px] xl:py-[10px] px-[30px] md:py-[10px] md:pl-[10px] md:pr-[20px] sm:shadow-[0_15px_25px_0_rgba(0,0,0,0.5)] md:shadow-[0_15px_25px_0_rgba(0,0,0,0.5)] sm:pt-[10px] sm:pr-[20px] sm:pt-[20px] sm:pl-[10px]">
+                        <img src="./img/clock.svg" alt=""
+                            class="size-[80px] overflow-hidden md:size-[70px] md:pb-[33px] sm:size-[70px] sm:pb-[38px]">
+                        <div
+                            class="flex flex-col gap-[5px] text-[18px] leading-[140%] text-cblack md:text-[16px] sm:text-[16px] sm:gap-[10px]">
+                            <div class="bold leading-[120%] text-[20px] text-cdarkblcak md:text-[18px] sm:text-[18px]">
+                                Подбор “Сейчас”</div>
+                            Подбор с возможностью начала сессии “здесь и сейчас”
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- SERVIS END -->
+            <!-- START -->
+            <div
+                class="flex flex-col gap-y-[70px] mt-[114px] select-none xl:mt-[99px xl:gap-[50px] md:mt-[100px] md:gap-[50px] sm:mt-[80px] sm:gap-[30px]">
+                <div class="bold text-[36px] leading-[120%] text-cdarkblcak text-center md:text-[28px] sm:text-[24px]">
+                    Как это устроено
+                </div>
+                <div
+                    class="flex text-[18px] leading-[140%] text-cblack md:items-center md:flex-col sm:flex-col sm:items-center">
+                    <div class="hidden sm:flex md:flex items-center gap-[10px] mb-[50px] sm:gap-[5px]">
+                        <a href="#"
+                            class="rounded-full size-[35px] bg-cgreen0/10 flex items-center justify-center bold text-cgreen0">1</a>
+                        <div class="w-[20px] h-[2px] bg-cgreen0/25 rounded-full sm:w-[30px]"></div>
+                        <a href="#"
+                            class="rounded-full size-[35px] bg-cgreen0 flex items-center justify-center bold text-white">2</a>
+                        <div class="w-[20px] h-[2px] bg-cgreen0/25 rounded-full sm:w-[30px]"></div>
+                        <a href="#"
+                            class="rounded-full size-[35px] bg-cgreen0/10 flex items-center justify-center bold text-cgreen0">3</a>
+                        <div class="w-[20px] h-[2px] bg-cgreen0/25 rounded-full sm:w-[30px]"></div>
+                        <a href="#"
+                            class="rounded-full size-[35px] bg-cgreen0/10 flex items-center justify-center bold text-cgreen0">4</a>
+                    </div>
+                    <div
+                        class="flex flex-col gap-y-[105px] pt-[45px] min-w-[355px] xl:gap-[100px] xl:min-w-[321px] md:hidden sm:hidden">
+                        <a href="#" class="flex gap-x-[10px] items-start">
+                            <div
+                                class="min-w-[35px] min-h-[35px] rounded-full bg-cgreen0/10 text-cgreen0 flex items-center justify-center">
+                                1</div>
+                            <div class="flex flex-col gap-y-[10px]">
+                                <div class="bold leading-[120%] text-cdarkblcak text-[20px]">Заполните простую анкету
+                                </div>
+                                <div>Расскажите, что вас беспокоит и что важно в психологе.</div>
+                            </div>
+                        </a>
+                        <a href="#" class="flex gap-x-[10px] items-start">
+                            <div
+                                class="min-w-[35px] min-h-[35px] rounded-full bg-cgreen0/10 text-cgreen0 flex items-center justify-center">
+                                3</div>
+                            <div class="flex flex-col gap-[10px]">
+                                <div class="bold leading-[120%] text-cdarkblcak text-[20px]">Выберите способ связи с
+                                    психологом</div>
+                                <div>49руб/мин по <span class="text-cgreen0">аудио/видео связи</span> 200руб за 24 часа
+                                    <span class="text-cgreen0">чата + аудио сообщения</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div
+                        class="flex flex-col gap-y-[40px] items-center min-w-[270px] ml-[70px] xl:ml-[46px] xl:min-w-[210px] md:m-0 md:gap-0 sm:m-0 sm:gap-0">
+                        <img src="./img/Mobile.jpg" alt=""
+                            class="w-full md:mb-[52px] sm:mb-[30px] md:w-[176px] md:h-[352px] sm:w-[160px] sm:h-[320px]">
+                        <div class="hidden md:flex flex-col mb-[40px] text-[16px] gap-[10px] items-center">
+                            <div class="bold text-[18px] leading-[120%] text-cdarkblcak">Заполните простую анкету</div>
+                            Расскажите, что вас беспокоит и что важно в психологе.
+                        </div>
+                        <div class="hidden sm:flex flex-col mb-[40px] text-[16px] gap-[10px] items-center text-center">
+                            <div class="bold text-[18px] leading-[120%] text-cdarkblcak">Выберите психолога</div>
+                            Выберите понравившегося психолога
+                        </div>
+                        <button type="submit"
+                            class="py-[13px] px-[30px] bg-white ring-1 ring-inset ring-cgreen0 rounded-[12px] hover:shadow-[0_15px_30px_0_rgba(220,232,243,.25)] leading-[120%] semibold text-cgreen0 hover:ring-0 hover:bg-cgreen0 hover:text-white">
+                            Начать общение
+                        </button>
+                    </div>
+                    <div
+                        class="flex flex-col gap-y-[105px] pt-[45px] min-w-[355px] ml-[65px] xl:ml-[46px] xl:gap-[100px] xl:min-w-[321px] md:hidden sm:hidden">
+                        <a href="#" class="flex gap-x-[10px] items-start">
+                            <div
+                                class="min-w-[35px] min-h-[35px] rounded-full bg-cgreen0 text-white flex items-center justify-center">
+                                2</div>
+                            <div class="flex flex-col gap-y-[10px]">
+                                <div class="bold leading-[120%] text-cdarkblcak text-[20px]">Выберите психолога
+                                </div>
+                                <div>Выберите понравившегося психолога</div>
+                            </div>
+                        </a>
+                        <a href="#" class="flex gap-x-[10px] items-start">
+                            <div
+                                class="min-w-[35px] min-h-[35px] rounded-full bg-cgreen0/10 text-cgreen0 flex items-center justify-center">
+                                4</div>
+                            <div class="flex flex-col gap-y-[10px]">
+                                <div class="bold leading-[120%] text-cdarkblcak text-[20px]">Начните общение</div>
+                                <div>Все общение происходит через платформу SPEAK. Вслучае если психолог вам не
+                                    понравится, вы можете заменить его без
+                                    дополнительных переплат
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- START END -->
+            <!-- SERVICE -->
+            <div
+                class="flex flex-col gap-[50px] mt-[145px] select-none xl:mt-[100px] md:mt-[100px] md:gap-[30px] sm:mt-[80px] sm:gap-[30px]">
+                <div class="bold text-[36px] leading-[120%] text-cdarkblcak md:text-[28px] sm:text-[26px]">Услуги</div>
+                <div
+                    class="flex items-center justify-between text-[18px] leading-[140%] text-cblack md:text-[16px] sm:gap-[32px] sm:flex-col sm:text-[16px]">
+                    <!-- FIRST ELEMENT -->
+                    <div
+                        class="flex flex-col gap-[30px] p-[30px] bg-cgreen0/10 rounded-[24px] w-[454px] xl:w-[383px] md:w-[275px] md:p-[20px] sm:w-[320px] sm:order-1 sm:p-[20px]">
+                        <div class="flex flex-col bold gap-[5px]">
+                            <div class="text-[20px] sm:text-[18px]">24 часа чата</div>
+                            <div class="text-[56px] leading-[100%] md:text-[38px] sm:text-[38px]">4200₽ <span
+                                    class="text-[24px] regular leading-[140%] md:text-[18px] sm:text-[18px]">/ 24
+                                    часа</span></div>
+                        </div>
+                        <div class="flex flex-col gap-[10px]">
+                            <div class="flex items-center gap-[10px]">
+                                <div
+                                    class="size-[20px] bg-cgreen0/10 rounded-full flex items-center justify-center md:min-w-[20px] md:self-start sm:min-w-[20px] sm:self-start">
+                                    <img src="./img/check.svg" alt="">
+                                </div>
+                                24 часа доступа к чату с психологом
+                            </div>
+                            <div class="flex items-center gap-[10px]">
+                                <div
+                                    class="size-[20px] bg-cgreen0/10 rounded-full flex items-center justify-center md:min-w-[20px] sm:min-w-[20px]">
+                                    <img src="./img/check.svg" alt="">
+                                </div>
+                                Аудио сообщения
+                            </div>
+                        </div>
+                        <button type="submit"
+                            class="bg-white rounded-xl shadow-[0_15px_30px_0_rgba(220,232,243,0.25)] py-[13px] px-[30px] text-cgreen0 leading-[120%] self-start hover:bg-cgreen0/50 hover:text-white md:w-full sm:w-full">
+                            Перейти
+                        </button>
+                    </div>
+                    <!-- FIRST ELEMENT END -->
+                    <!-- SECOND ELEMENT -->
+                    <div
+                        class="flex flex-col gap-[30px] rounded-[24px] bg-cgreen0 p-[30px] text-white relative xl:w-[542px] md:w-[393px] md:px-[20px] sm:w-[320px] sm:px-[20px]">
+                        <div class="flex flex-col gap-[5px]">
+                            <div class="bold text-[20px]">Аудио/Видео сессии</div>
+                            <div class="bold text-[56px] leading-[100%] md:text-[38px] sm:text-[38px]">49₽ <span
+                                    class="regular text-[24px] leading-[140%] md:text-[18px] sm:text-[18px]">/ 1
+                                    минута</span></div>
+                        </div>
+                        <div class="flex flex-col gap-[10px] regular">
+                            <div class="flex items-center gap-[10px]">
+                                <div
+                                    class="size-[20px] xl:min-w-[20px] flex items-center justify-center rounded-full shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] bg-white/25 xl:self-start md:min-w-[20px] md:self-start sm:min-w-[20px] sm:self-start">
+                                    <img src="./img/check-white.svg" alt="">
+                                </div>
+                                Безлимитный доступа к чату с психологом до начала сессии
+                            </div>
+                            <div class="flex items-center gap-[10px]">
+                                <div
+                                    class="size-[20px] flex items-center justify-center rounded-full shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] bg-white/25 sm:min-w-[20px]">
+                                    <img src="./img/check-white.svg" alt="">
+                                </div>
+                                Аудио/Видео звонки
+                            </div>
+                            <div class="flex items-center gap-[10px]">
+                                <div
+                                    class="size-[20px] flex items-center justify-center rounded-full shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] bg-white/25 sm:min-w-[20px] sm:self-start">
+                                    <img src="./img/check-white.svg" alt="">
+                                </div>
+                                Нет лимитов по времени разговора
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-[20px] md:flex-col sm:gap-[20px] sm:flex-col">
+                            <div
+                                class="flex items-center bg-white rounded-xl px-[20px] regular leading-[135%] text-cblack md:w-full sm:w-full">
+                                <div
+                                    class="flex items-center gap-[59px] py-[12px] xl:gap-[19px] md:gap-[93px] sm:gap-[24px]">
+                                    <div class="flex items-center gap-[15px]">
+                                        <button class="hover:scale-[1.3]"><img src="./img/left.svg" alt=""></button>
+                                        <div class="">20</div>
+                                        <button class="hover:scale-[1.3]"><img src="./img/right.svg" alt=""></button>
+                                    </div>
+                                    <div class="text-min">min</div>
+                                </div>
+                                <div
+                                    class="w-[1px] h-[48px] bg-min mx-[20px] md:mx-[12px] md:h-[30px] sm:mx-[12px] sm:h-[30px]">
+                                </div>
+                                <div
+                                    class="flex items-center gap-[130px] py-[12px] xl:gap-[64px] md:gap-[20px] md:ml-auto sm:gap-[20px]">
+                                    <div class="md:hidden sm:hidden">40</div>
+                                    <div class="hidden md:block sm:block">2450</div>
+                                    <div class="text-min">₽</div>
+                                </div>
+                            </div>
+                            <button type="submit"
+                                class="bg-white rounded-xl shadow-[0_15px_30px_0_rgba(220,232,243,0.25)] py-[13px] px-[30px] bold text-[18px] leading-[120%] text-cgreen0 hover:bg-white/30 hover:text-white md:w-full sm:w-full">
+                                Перейти
+                            </button>
+                        </div>
+                        <a href="#"
+                            class="absolute top-0 right-0 bg-cgold py-[9px] px-4 flex items-center gap-[10px] roboto text-base leading-[100%] rounded-tr-[24px] rounded-bl-[24px] md:text-[14px] md:py-[5px] md:rounded-bl-[16px] sm:text-[12px] sm:rounded-bl-[16px] sm:py-[5px]">
+                            Популярное
+                            <img src="./img/white-star.svg" alt="" class="md:size-[14px] sm:size-[14px]">
+                        </a>
+                    </div>
+                    <!-- SECOND ELEMENT END -->
+                </div>
+            </div>
+            <!-- SERVICE END -->
+            <!-- DOWNLOAD -->
+            <div
+                class="flex gap-[235px] mt-[158px] xl:mt-[100px] xl:gap-[181px] md:mt-[100px] md:gap-0 sm:mt-[80px] sm:flex-col sm:gap-[30px] sm:items-center">
+                <div class="flex flex-col flex-1 sm:items-center pt-[20px] md:pt-0 sm:order-1">
+                    <div
+                        class="bold leading-[120%] text-[32px] text-cdarkblcak mb-[37px] xl:mb-[30px] md:text-[28px] md:mb-[30px] sm:text-[24px] sm:text-center sm:px-[10px] sm:mb-[30px]">
+                        Скачайте бесплатно приложение SPEAK
+                    </div>
+                    <div class="flex gap-5 mb-[72px] xl:mb-[50px] md:mb-[40px] sm:mb-[40px]">
+                        <div
+                            class="size-[90px] flex items-center justify-center bg-white rounded-xl shadow-[0_15px_25px_0_rgba(0,0,0,.05)]">
+                            <img src="./img/sss.svg" alt="">
+                        </div>
+                        <div class="flex flex-col gap-[5px] text-base leading-[140%] text-cblack sm:text-[14px]">
+                            <div class="semibold text-[24px] text-cgreen0 sm:text-[18px]">Speak</div>
+                            <div>онлайн сессии с психологом</div>
+                            <div>доступно для iOS и Android</div>
+                        </div>
+                    </div>
+                    <div class="flex gap-5">
+                        <a href="#"><img src="./img/appstore.svg" alt=""></a>
+                        <a href="#"><img src="./img/playstore.svg" alt=""></a>
+                    </div>
+                </div>
+                <img src="./img/phone-p.png" alt="" class="md:w-[294px] md:h-[322px] sm:w-[295px] sm:h-[321px]">
+            </div>
+            <!-- DOWNLOAD END -->
+            <!-- REVIEWS -->
+            <div
+                class="flex flex-col mt-[185px] leading-[130%] text-[16px] text-cblack xl:mt-[100px] md:mt-[100px] sm:mt-[80px] sm:text-[14px] sm:leading-[140%]">
+                <div
+                    class="bold text-[36px] leading-[120%] text-cdarkblcak mb-[50px] xl:text-[32px] md:text-[28px] sm:text-[26px] sm:text-center sm:mb-[30px]">
+                    Отзывы
+                </div>
+                <div class="flex gap-[20px] items-start mb-[40px]">
+                    <a href="#"
+                        class="flex gap-[30px] p-[30px] bg-white hover:shadow-[0_15px_25px_0_rgba(0,0,0,0.05)] md:shadow-[0_15px_25px_0_rgba(0,0,0,0.05)] sm:shadow-[0_15px_25px_0_rgba(0,0,0,0.05)] rounded-[24px] w-[549px] w-[462px] md:p-[20px] md:flex-col md:gap-[20px] sm:p-[20px] sm:flex-col sm:gap-[20px]">
+                        <div class="hidden md:flex sm:flex gap-[15px]">
+                            <img src="./img/woman.svg" alt="" class="rounded-[24px] size-[70px]">
+                            <div class="flex flex-col">
+                                <div class="flex items-center gap-[5px] mb-[10px]">
+                                    <img src="./img/star.svg" alt="">
+                                    <img src="./img/star.svg" alt="">
+                                    <img src="./img/star.svg" alt="">
+                                    <img src="./img/star.svg" alt="">
+                                    <img src="./img/star.svg" alt="">
+                                </div>
+                                Sophia Jones
+                                <div class="bold">Teacher</div>
+                            </div>
+                        </div>
+                        <img src="./img/woman.svg" alt="" class="rounded-[24px] size-[100px] md:hidden sm:hidden">
+                        <div class="flex flex-col">
+                            <div class="flex items-center justify-between md:hidden sm:hidden">
+                                Sophia Jones
+                                <div class="flex items-center gap-[5px]">
+                                    <img src="./img/star.svg" alt="">
+                                    <img src="./img/star.svg" alt="">
+                                    <img src="./img/star.svg" alt="">
+                                    <img src="./img/star.svg" alt="">
+                                    <img src="./img/star.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="bold mb-[10px] md:hidden sm:hidden">Teacher</div>
+                            <p class="leading-[150%] xl:leading-[140%] sm:leading-[140%]">
+                                After just 2 months, Speak has already made such an impact on my life. It has helped me
+                                develop manageable solutions to
+                                feelings of stress, anxiety, and overwhelm. Speaker helped me navigate the difficult
+                                stages
+                                of grief after losing my
+                                mom, with compassion and encouragement. And she’s easy to open up to, making me feel
+                                heard
+                                and understood.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#"
+                        class="flex gap-[30px] p-[30px] bg-white hover:shadow-[0_15px_25px_0_rgba(0,0,0,0.05)] md:shadow-[0_15px_25px_0_rgba(0,0,0,0.05)] sm:shadow-[0_15px_25px_0_rgba(0,0,0,0.05)] rounded-[24px] w-[551px] w-[462px] md:p-[20px] md:flex-col md:gap-[20px] sm:hidden">
+                        <div class="hidden md:flex gap-[15px]">
+                            <img src="./img/man.svg" alt="" class="rounded-[24px] size-[70px]">
+                            <div class="flex flex-col">
+                                <div class="flex items-center gap-[5px] mb-[10px]">
+                                    <img src="./img/star.svg" alt="">
+                                    <img src="./img/star.svg" alt="">
+                                    <img src="./img/star.svg" alt="">
+                                    <img src="./img/star.svg" alt="">
+                                    <img src="./img/star.svg" alt="">
+                                </div>
+                                Jay K. Braun
+                                <div class="bold">Artist</div>
+                            </div>
+                        </div>
+                        <img src="./img/man.svg" alt="" class="rounded-[24px] size-[100px] md:hidden">
+                        <div class="flex flex-col">
+                            <div class="flex items-center justify-between md:hidden">
+                                Jay K. Braun
+                                <div class="flex items-center gap-[5px]">
+                                    <img src="./img/star.svg" alt="">
+                                    <img src="./img/star.svg" alt="">
+                                    <img src="./img/star.svg" alt="">
+                                    <img src="./img/star.svg" alt="">
+                                    <img src="./img/star.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="bold mb-[10px] md:hidden">Artist</div>
+                            <p class="leading-[150%] xl:leading-[140%]">
+                                After just 2 months, Speak has already made such an impact on my life. It has helped me
+                                develop manageable solutions to
+                                feelings of stress, anxiety, and overwhelm. Speaker helped me navigate the difficult
+                                stages of grief after losing my
+                                mom, with compassion and
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex gap-[5px] self-center">
+                    <div class="w-[20px] h-[5px] bg-cgreen0/25 rounded-full"></div>
+                    <div class="w-[20px] h-[5px] bg-cgreen0/25 rounded-full"></div>
+                    <div class="w-[30px] h-[6px] bg-cgreen100/75 rounded-full"></div>
+                    <div class="w-[20px] h-[5px] bg-cgreen0/25 rounded-full"></div>
+                    <div class="w-[20px] h-[5px] bg-cgreen0/25 rounded-full"></div>
+                </div>
+            </div>
+            <!-- REVIEWS END -->
+            <!-- TEXT -->
+            <div
+                class="flex flex-col mt-[158px] gap-[30px] text-[16px] leading-[140%] text-cblack xl:mt-[100px] md:mt-[100px] sm:mt-[80px]">
+                <div class="bold text-[32px] leading-[120%] text-cdarkblcak sm:text-[24px] sm:text-center">Детский
+                    психолог онлайн</div>
+                <div class="flex gap-[20px] md:flex-col sm:flex-col">
+                    <div class="flex flex-col gap-[30px] flex-1">
+                        <div class="flex flex-col gap-[10px]">
+                            <div class="bold leading-[120%] text-cdarkblcak text-[20px]">Чем поможет детский психолог
+                                онлайн?</div>
+                            <p>
+                                Каждый родитель хочет, чтобы его ребенок рос сильной уравновешенной личностью. Мы
+                                понимаем, что именно в детстве
+                                формируются зачатки характера. Как справиться с возникающими проблемами, как выстроить
+                                отношения с ребенком, чтобы он
+                                доверял вам? На эти и другие вопросы поможет ответить детский психолог онлайн.
+                            </p>
+                        </div>
+                        <div class="flex flex-col gap-[10px]">
+                            <div class="bold leading-[120%] text-cdarkblcak text-[20px]">
+                                Преимущества онлайн-консультации детского психолога
+                            </div>
+                            <p>
+                                Главный плюс сеанса в таком формате – экономия времени. Вам не придется тратить время на
+                                дорогу и долгие сборы. Все, что
+                                нужно – компьютер или смартфон, микрофон и блокнот с ручкой, чтобы записывать важную
+                                информацию. Если вам или ребенку
+                                тяжело общаться с незнакомым человеком лично, онлайн-связь в этом случае упростит дело.
+                            </p>
+                        </div>
+                        <div class="flex flex-col gap-[10px]">
+                            <div class="bold leading-[120%] text-cdarkblcak text-[20px]">
+                                Когда нужна помощь детского психолога онлайн?
+                            </div>
+                            <p>
+                                Онлайн-консультация детского психолога может быть полезна, если у вас есть вопросы по
+                                таким темам, как:
+                            </p>
+                            <ul
+                                class="list-disc ml-[20px] flex flex-col gap-[15px] xl:gap-[10px] sm:gap-[10px] md:gap-[10px]">
+                                <li>Плохая успеваемость;</li>
+                                <li>Стеснительность</li>
+                                <li>Цифровая зависимость;</li>
+                                <li>Агрессия</li>
+                                <li>Потеря близкого в семье;</li>
+                                <li>Возрастной кризис;</li>
+                                <li>Подготовка к детскому саду или школе;</li>
+                                <li>Профориентация.</li>
+                            </ul>
+                        </div>
+                        <p>
+                            Это лишь часть тем, которые можно затронуть. Помните, что, если возникает ситуация, в
+                            которой вы самостоятельно не
+                            можете разобраться, сейчас консультация детского психолога онлайн поможет найти ответы.
+                        </p>
+                        <div class="flex flex-col gap-[10px]">
+                            <div class="bold leading-[120%] text-cdarkblcak text-[20px]">
+                                Как проходит онлайн-консультация детского психолога?
+                            </div>
+                            <p>
+                                Задать вопрос детскому психологу онлайн может как сам ребенок, так и родитель.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-[30px] flex-1">
+                        <p>
+                            На первом сеансе обычно присутствует родитель или опекун, а также сам «виновник торжества».
+                            Следующие сеансы могут быть
+                            и без взрослого, если ребенок сам в состоянии связаться через интернет.
+                        </p>
+                        <p>
+                            Бывает и так, что сначала ребенку присутствовать необязательно. В этом случае работа
+                            происходит с родителем, а если есть
+                            необходимость, позже присоединяется ребенок.
+                        </p>
+                        <p>
+                            Психолог по детским вопросам онлайн может попросить ребенка нарисовать что-то, далее по этим
+                            рисункам он проведет
+                            диагностику. Родитель тоже является звеном связи с психикой ребенка. Через него психолог
+                            может сделать вывод о том,
+                            какая проблема сейчас назрела.
+                        </p>
+                        <p>
+                            Если специалист попросит вас пройти обследование или сдать анализы для более ясной картины,
+                            не пугайтесь, это нормально.
+                            Таким образом, вы оба сможете исключить какие-либо диагнозы
+                        </p>
+                        <div class="flex flex-col gap-[10px]">
+                            <div class="bold leading-[120%] text-cdarkblcak text-[20px]">
+                                О чем поговорить с детским психологом?
+                            </div>
+                            <p>
+                                Родители малышей часто обращаются с вопросами об адаптации в детском саду. Есть
+                                тревожные мамы, которые сомневаются,
+                                стоит ли отдавать малыша в сад или же пока слишком рано. Очень многих волнует, что
+                                воспитатель будет срываться на
+                                ребенка. Это логично, ведь в силу того, что в СМИ регулярно появляются жуткие новости о
+                                чудовищных ЧП в детсадах,
+                                беспокойство обосновано.
+                            </p>
+                        </div>
+                        <p>
+                            Отдельный вопрос подготовки к саду. В интернете полно информации в таком ключе: «ребенок
+                            должен научиться самостоятельно
+                            есть, ходить в туалет и засыпать сам перед тем, как идти в сад». Особо мнительные
+                            беспрекословно верят, другие понимают:
+                            ребенок ничего никому не должен. Его невозможно научить чему-то, пока он сам не захочет
+                            делать это. «Дрессировке» малыши
+                            не поддаются. Но пугаться не стоит, в любом случае, воспитатели будут помогать малышам в
+                            этих вопросах. Главное –
+                            настроиться на позитив и верить в хорошее.
+                        </p>
+                        <p>
+                            Дети постарше сталкиваются с проблемами переходного возраста, неуверенностью в себе,
+                            безответной любовью и другими. Если
+                            вы понимаете, что вам с чадом необходима онлайн-консультация, вы можете выбрать специалиста
+                            на нашем сайте.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- TEXT END -->
+        </div>
+        <footer class="bg-white py-[70px] mt-[156px] xl:mt-[100px] md:mt-[100px] md:py-[50px] sm:mt-[80px] sm:py-[50px]">
+            <div class="contain xl:px-[30px] md:px-[30px] sm:px-[20px]">
+                <div class="flex gap-[175px] text-[18px] medium leading-[120%] text-cblack xl:gap-[84px] md:flex-col md:gap-[40px] md:items-center sm:flex-col sm:gap-[40px]">
+                    <div class="flex flex-col gap-[40px] items-start md:items-center sm:items-center">
+                        <img src="./img/logo.svg" alt="">
+                        <div class="flex gap-[30px] items-center md:gap-x-[40px] sm:flex-col">
+                            <div class="flex flex-col gap-[20px] md:items-center sm:items-center sm:whitespace-nowrap sm:gap-[30px]">
+                                <a href="#" class="hover:scale-[1.1] hover:text-cgreen0/50">Home</a>
+                                <a href="#" class="hover:scale-[1.1] hover:text-cgreen0/50">About us</a>
+                            </div>
+                            <div class="flex flex-col gap-[20px] md:items-center sm:items-center sm:whitespace-nowrap sm:gap-[30px]">
+                                <a href="#" class="hover:scale-[1.1] hover:text-cgreen0/50">Blog</a>
+                                <a href="#" class="hover:scale-[1.1] hover:text-cgreen0/50">Contact</a>
+                            </div>
+                            <div class="flex flex-col gap-[20px] md:items-center sm:items-center sm:whitespace-nowrap sm:gap-[30px]">
+                                <a href="#" class="hover:scale-[1.1] hover:text-cgreen0/50">Privacy Policy</a>
+                                <a href="#" class="hover:scale-[1.1] hover:text-cgreen0/50">Terms and Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-[36px] items-start md:items-center sm:items-center sm:gap-[40px]">
+                        <div class="flex items-center gap-5">
+                            <a href="#"><img src="./img/facebook.svg" alt=""></a>
+                            <a href="#"><img src="./img/instagram.svg" alt=""></a>
+                            <a href="#"><img src="./img/linkedin.svg" alt=""></a>
+                            <a href="#"><img src="./img/twitter.svg" alt=""></a>
+                        </div>
+                        <div class="flex flex-col gap-5 sm:gap-[30px]">
+                            <a href="#" class="flex items-center gap-[10px] group">
+                                <img src="./img/mail.svg" alt="">
+                                <div class="group-hover:scale-[1.05] group-hover:text-cgreen0/50">info@speak.help</div>
+                            </a>
+                            <a href="#" class="flex items-center gap-[10px] group sm:items-start">
+                                <img src="./img/location.svg" alt="">
+                            <div class="group-hover:scale-[1.05] group-hover:text-cgreen0/50">33 W 60th Street, 8th FI New York, NY 10023</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

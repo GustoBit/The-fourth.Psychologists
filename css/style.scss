@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "bold";
+    src: url("/font/bold.ttf");
+}
+@font-face {
+    font-family: "medium";
+    src: url("/font/medium.ttf");
+}
+@font-face {
+    font-family: "regular";
+    src: url("/font/regular.ttf");
+}
+@font-face {
+    font-family: "semibold";
+    src: url("/font/semibold.ttf");
+}
+@font-face {
+    font-family: "roboto";
+    src: url("/font/roboto.ttf");
+}
+.bold {
+    font-family: 'bold';
+}
+.medium {
+    font-family: 'medium';
+}
+.regular {
+    font-family: 'regular';
+}
+.semibold {
+    font-family: 'semibold';
+}
+.roboto {
+    font-family: 'roboto';
+}
+.contain {
+    max-width: 1140px;
+    padding: 0 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
